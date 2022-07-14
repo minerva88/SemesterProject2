@@ -1,4 +1,4 @@
-
+import getArticles from "./getArticles.js";
 
 export function searchArticles(articles) {
 
@@ -9,11 +9,11 @@ export function searchArticles(articles) {
         const searchValue = event.target.value.trim().toLowerCase();
 
         const filteredArticles = articles.filter(function (article) {
-            if (article.title.toLowerCase().startsWith(searchValue)) {
+            if (article.title.rendered.toLowerCase().startsWith(searchValue)) {
                 return true;
             }
         });
 
-        getAllArticles(filteredArticles);
+        getArticles(filteredArticles);
     }
 }
