@@ -1,0 +1,1 @@
+export const baseUrl = 'https://flowerpower.linnwilhelmsen.net/wp-json/wp/v2/';

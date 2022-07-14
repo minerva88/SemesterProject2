@@ -1,0 +1,23 @@
+$colors: (
+    white: #fff,
+    lightgrey: #f5f5f5,
+    darkgrey: #707070,
+    black: #000,
+    brightblue: #54f2ff,
+    tintedblue: #d6e6f2,
+    darkblue: #00279a,
+);
+
+@function getColor($color) {
+    @return map-get($colors, $color);
+}
+
+$fonts: (
+    fontheader: "Lato",
+    fontmedium: "Titillium Web",
+    fontparagraph: "Open Sans",
+);
+
+@function getFont($font) {
+    @return map-get($fonts, $font);
+}
