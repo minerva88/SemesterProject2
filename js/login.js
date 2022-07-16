@@ -1,4 +1,7 @@
-import { baseUrl } from "./constants/api.js";
+import { authUrl } from "./constants/api.js";
+import { displayMessage } from "./common/displayMessage.js";
+import { saveToken } from "./utils/storage.js";
+import { saveUser } from "./utils/storage.js";
 
 const form = document.querySelector("form");
 const username = document.querySelector("#username");
@@ -20,9 +23,9 @@ function submitForm(event) {
 }
 
 async function doLogin(username, password) {
-    const url = baseUrl + 'auth/local';
+    const url = authUrl;
 
-    const data = JSON.stringify({ identifier: username, password: password });
+    const data = JSON.stringify({ username: username, password: password });
 
     const options = {
         method: 'POST',
@@ -36,11 +39,16 @@ async function doLogin(username, password) {
         const response = await fetch(url, options);
         const json = await response.json();
 
-        if (json.user) {
+        if (json.user_display_name) {
             displayMessage("success", "Successfully logged in", ".message-container");
+
+            saveToken(json.token);
+            saveUser(json.user_display_name);
+
+            location.href = "/admin.html";
         }
 
-        if (json.error) {
+        if (json.code) {
             displayMessage("warning", "Invalid login details", ".message-container");
         }
 
