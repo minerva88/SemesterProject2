@@ -1,0 +1,15 @@
+.full-article {
+    display: flex;
+    flex-direction: column;
+    background: getColor(lightgrey);
+    margin: 50px auto;
+
+    h2 {
+        margin: 20px auto;
+    }
+
+    .wp-block-image {
+        width: 80%;
+        
+    }
+}

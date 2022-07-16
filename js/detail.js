@@ -1,4 +1,5 @@
 import { baseUrl } from "./constants/api.js";
+import fullArticle from "./ui/fullArticle.js";
 
 const queryString = document.location.search;
 
@@ -17,11 +18,10 @@ const articleUrl = baseUrl + 'posts/' + id;
         const response = await fetch(articleUrl);
         const details = await response.json();
 
-        document.title = details.name;
+        document.title = details.title.rendered;
 
-        const detailContainer = document.querySelector('.full-article');
-
-        detailContainer.innerHTML = `${details.content.rendered}`;
+        fullArticle(details);
+        
     } catch (error) {
         console.log(error);
     }
