@@ -65,9 +65,17 @@ nav .nav-link {
   width: 80%;
 }
 
-.create-form {
+.crud-form {
   background: #f5f5f5;
   border-radius: 10px;
+  max-width: 70%;
+  margin: 0 auto;
+}
+
+@media (max-width: 990px) {
+  .crud-form {
+    max-width: 90%;
+  }
 }
 
 :root {

@@ -1,0 +1,12 @@
+.crud-form {
+
+    background: getColor(lightgrey);
+    border-radius: 10px;
+    max-width: 70%;
+    margin: 0 auto;
+
+    @media (max-width: 990px) {
+        max-width: 90%;
+    }
+
+}
