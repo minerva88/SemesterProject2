@@ -7,7 +7,7 @@ export default function getPostToDelete(details) {
                                             <div class="card-body">
                                             <h5 class="card-title">${details.title.rendered}</h5>
                                             <p class="card-text">${details.excerpt.rendered}</p>
-                                            <a href="delete.html?id=${details.id}"><button class="btn btn-danger">Delete article</button></a>
+                                            <button class="btn btn-danger" id="delete-btn">Delete article</button>
                                             </div>
                                         </div>
                                     </div>`;

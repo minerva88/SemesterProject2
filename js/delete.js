@@ -13,6 +13,8 @@ if (!id) {
 const postUrl = baseUrl + "posts/" + id;
 
 
+
+
 (async function () {
     try {
         const response = await fetch(postUrl);
@@ -26,11 +28,13 @@ const postUrl = baseUrl + "posts/" + id;
     }
 })();
 
-function deleteButton(id) {
+const deleteButton = document.getElementById('delete-btn');
+deleteButton.addEventListener("click", deletePost);
 
-    const deleteButton = document.querySelector(".btn.danger");
 
-    deleteButton.onclick = async function () {
+function deletePost() {
+
+    (async function () {
 
         const url = baseUrl + 'posts/' + id;
 
@@ -53,5 +57,5 @@ function deleteButton(id) {
         catch(error) {
             console.log(error);
         }
-    }
+    })();
 }
