@@ -33,10 +33,6 @@ If you would like to view the admin side of the site, please contact me at linnw
 
 ## Contact
 
-This is where you can leave your social links for people to contact you, such as a LinkedIn profile or Twitter link e.g.
-
-[My Twitter page](www.twitter.com)
-
-[My LinkedIn page](www.linkedin.com)
+[My LinkedIn page](https://www.linkedin.com/in/linn-wilhelmsen-7999886a/)
 
 
