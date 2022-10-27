@@ -2,7 +2,7 @@
 
 # TechCoding - A Frontend Wiki
 
-![image](techcoding.png)
+![image](screenshot.png)
 
 This is a wiki-style website for informational articles about frontend development.
 
@@ -26,6 +26,8 @@ Key functionalities when completing the project:
 
 
 ## Getting Started
+
+Site is deployed at: (https://radiant-capybara-c4023f.netlify.app)
 
 If you would like to view the admin side of the site, please contact me at linnw88@gmail.com and state your purpose, for login credentials.
 
